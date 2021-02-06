@@ -9,26 +9,17 @@ public class YandexSpellerCheckTextTest extends AbstractYandexSpellerCheckTextTe
 
     @Test(dataProvider = "checkTextNoOptionsDataSet",dataProviderClass = YandexSpellerDataProvider.class)
     public void checkTextNoOptionsTest(CheckTextRequestDto request) {
-        CheckTextResponseDto[] response = checkTextService.checkTextWithParams(request);
-        checkTextAssertionsService.verifyWrongWord(request, response);
-        checkTextAssertionsService.verifyResponseText(request, response);
-        checkTextAssertionsService.verifyResponseErrorCode(request, response);
+        verifyResponse(request);
     }
 
     @Test(dataProvider = "checkTextIgnoreDigitsDataSet",dataProviderClass = YandexSpellerDataProvider.class)
     public void checkTextIgnoreDigitsTest(CheckTextRequestDto request) {
-        CheckTextResponseDto[] response = checkTextService.checkTextWithParams(request);
-        checkTextAssertionsService.verifyWrongWord(request, response);
-        checkTextAssertionsService.verifyResponseText(request, response);
-        checkTextAssertionsService.verifyResponseErrorCode(request, response);
+        verifyResponse(request);
     }
 
     @Test(dataProvider = "checkTextIgnoreCapitalizationDataSet",dataProviderClass = YandexSpellerDataProvider.class)
     public void checkTextIgnoreCapitalizationTest(CheckTextRequestDto request) {
-        CheckTextResponseDto[] response = checkTextService.checkTextWithParams(request);
-        checkTextAssertionsService.verifyWrongWord(request, response);
-        checkTextAssertionsService.verifyResponseText(request, response);
-        checkTextAssertionsService.verifyResponseErrorCode(request, response);
+        verifyResponse(request);
     }
 
     @Test(dataProvider = "checkTextFindRepeatWordsDataSet",dataProviderClass = YandexSpellerDataProvider.class)
@@ -36,14 +27,12 @@ public class YandexSpellerCheckTextTest extends AbstractYandexSpellerCheckTextTe
         CheckTextResponseDto[] response = checkTextService.checkTextWithParams(request);
         checkTextAssertionsService.verifyWrongWord(request, response);
         checkTextAssertionsService.verifyResponseErrorCode(request, response);
+        checkTextAssertionsService.verifyStatusCode(request);
     }
 
     @Test(dataProvider = "checkTextCapitalizationErrorDataSet", dataProviderClass = YandexSpellerDataProvider.class)
     public void checkTextCapitalizationErrorTest(CheckTextRequestDto request) {
-        CheckTextResponseDto[] response = checkTextService.checkTextWithParams(request);
-        checkTextAssertionsService.verifyWrongWord(request, response);
-        checkTextAssertionsService.verifyResponseText(request, response);
-        checkTextAssertionsService.verifyResponseErrorCode(request, response);
+        verifyResponse(request);
     }
 
 }

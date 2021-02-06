@@ -19,7 +19,7 @@ import static io.restassured.RestAssured.given;
 
 public class CommonService {
 
-    private RequestSpecification REQUEST_SPECIFICATION;
+    protected RequestSpecification REQUEST_SPECIFICATION;
 
     public CommonService() {
         RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
@@ -29,18 +29,6 @@ public class CommonService {
                 .addFilter(new ResponseLoggingFilter())
                 .build();
     }
-
-//    public Response getTextNoParams(String uri, String text) {
-//        Response response = given(REQUEST_SPECIFICATION)
-//                .queryParam("text", text)
-//                .get(uri)
-//                .then().statusCode(Matchers.greaterThanOrEqualTo(HttpStatus.SC_OK))
-//                .extract().response()
-//                .then().statusCode(Matchers.lessThan(HttpStatus.SC_MULTIPLE_CHOICES))
-//                .log().all()
-//                .extract().response();
-//        return response;
-//    }
 
     public Response getTextWithParams(String uri, Map<String, Object> params) {
         RequestSpecification specification = given(REQUEST_SPECIFICATION);
