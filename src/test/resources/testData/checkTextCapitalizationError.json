@@ -1,0 +1,18 @@
+{
+  "data_1": {
+    "text": "russia is beautiful",
+    "lang": "en",
+    "options": "512",
+    "wrongWord": "russia",
+    "expectedWord": "Russia",
+    "expectedCode": "3"
+  },
+  "data_2": {
+    "text": "I am from moscow",
+    "lang": "en",
+    "options": "512",
+    "wrongWord": "moscow",
+    "expectedWord": "Moscow",
+    "expectedCode": "3"
+  }
+}

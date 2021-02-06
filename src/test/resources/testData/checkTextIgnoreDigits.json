@@ -1,0 +1,18 @@
+{
+  "data_1": {
+    "text": "Hes12 broter is a lawyer",
+    "lang": "en",
+    "options": "2",
+    "wrongWord": "broter",
+    "expectedWord": "brother",
+    "expectedCode": "1"
+  },
+  "data_2": {
+    "text": "very nicee uegfw67",
+    "lang": "en",
+    "options": "2",
+    "wrongWord": "nicee",
+    "expectedWord": "nice",
+    "expectedCode": "1"
+  }
+}
