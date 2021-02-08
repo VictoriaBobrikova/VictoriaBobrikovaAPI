@@ -1,0 +1,15 @@
+{
+  "data_1": {
+    "text": "helO",
+    "wrongWord" : "helO",
+    "expectedWord": "hello",
+    "expectedCode": "1"
+
+  },
+  "data_2": {
+    "text": "hi wirld",
+    "wrongWord" : "wirld",
+    "expectedWord": "world",
+    "expectedCode": "1"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "data_1": {
+    "text": "saint-petersburg is beutiful",
+    "lang": "en",
+    "options": "512",
+    "wrongWord": "beutiful",
+    "expectedWord": "beautiful",
+    "expectedCode": "1"
+  },
+  "data_2": {
+    "text": "I was bourn in moscow",
+    "lang": "en",
+    "options": "512",
+    "wrongWord": "bourn",
+    "expectedWord": "born",
+    "expectedCode": "1"
+  }
+}
